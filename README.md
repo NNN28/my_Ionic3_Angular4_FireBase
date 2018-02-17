@@ -6,3 +6,4 @@ Send friend request/accept request
 Slide card for the profile of person connected
 automatic slide for publicity
  Firebase and Google Maps Location Tracking
+ TESTE 

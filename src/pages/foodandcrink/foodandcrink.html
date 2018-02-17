@@ -1,0 +1,38 @@
+
+<ion-header>
+  <ion-navbar color="hcolor">
+    <ion-title class="titulo">Our Offert
+   
+  </ion-title> 
+  </ion-navbar>
+
+</ion-header>
+
+<ion-list class="listoffert">
+<ion-item-sliding  *ngFor="let offert_item of offert_items">
+  <ion-item>
+    
+      <img src="../../assets/imgs/frita.jpg">
+    
+    <h2>Bata frita</h2>
+  </ion-item>
+  <ion-item-options side="left">
+    <button ion-button color="primary">
+      <ion-icon name="checkmark"></ion-icon>
+      Buy
+    </button>
+    <button ion-button color="secondary">
+      <ion-icon name="cash"></ion-icon>
+      Price:20 Rs
+      <p>20 Rs</p>
+    </button>
+  </ion-item-options>
+  <ion-item-options side="right">
+    <button ion-button color="primary">
+      Description
+      <p>big packet of batata frita</p>
+    </button>
+  </ion-item-options>
+</ion-item-sliding>
+
+</ion-list>

@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-navbar color="hcolor">
+    
+    <ion-title class="titulo">Social Card </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="localisation()">
+        <ion-icon name="locate"></ion-icon>
+      </button>
+    </ion-buttons> 
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg social-cards" >
+
+    <ion-list>
+  <ion-slides autoplay="1000" loop="true" speed="2000" >
+    <ion-slide *ngFor="let slide of slideData">
+        <ion-card class="oferta_slide">
+          <div class="zisephoto">
+      <img  src="{{slide.image}}" />
+    </div>
+      <ion-card-content>
+          <ion-card-title style="font-size:20px !important;">
+            Oferta
+          </ion-card-title>
+        </ion-card-content>
+    </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+ 
+<ion-slides >
+    <ion-slide *ngFor="let key of filteredusers" >
+      
+    
+  <ion-card class="profil_slide">
+  
+    <ion-item (click)="detail(user)">
+      <ion-avatar item-start >
+        <img src="{{key.photoURL}}" alt="">
+      </ion-avatar>
+      <h2>{{key.displayName}}</h2>
+      <p>November 5, 1955</p>
+      <p>bk</p>
+    </ion-item>
+  
+    <!--<img src="../../assets/imgs/cat.jpg" alt="">-->
+  
+    <ion-card-content>
+      <p>some thing about youhere</p>
+    </ion-card-content>
+  
+    <ion-row>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start>
+          <ion-icon name='thumbs-up'></ion-icon>
+         Likes
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start (click)="sendreq(key)">
+          <ion-icon name='text'></ion-icon>
+          Send Request
+        </button>
+      </ion-col>
+      <ion-col align-self-center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-slide>
+</ion-slides>
+</ion-list>
+<ion-fab right bottom>
+  <button ion-fab color="danger"><ion-icon name="bulb"></ion-icon></button>
+  <ion-fab-list side="top">
+    <button ion-fab color="primary" (click)=fooddrink()><ion-icon name="beer"></ion-icon></button>
+  </ion-fab-list>
+  <ion-fab-list side="bottom">
+    <button ion-fab color="secondary" (click)=chat()><ion-icon name="chatbubbles"></ion-icon></button>
+  </ion-fab-list>
+  <ion-fab-list side="left">
+    <button ion-fab color="secondary"(click)=chat()><ion-icon name="chatbubbles"></ion-icon></button>
+  </ion-fab-list>
+  <ion-fab-list side="right">
+    <button ion-fab color="dark"><ion-icon name="logo-twitter"></ion-icon></button>
+  </ion-fab-list>
+</ion-fab>
+</ion-content>
